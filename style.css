@@ -1,0 +1,184 @@
+/* Set a light blue background for the whole page */
+body {
+  background: #e6f2fa85; /* Intel light blue */
+}
+
+/* Intel Hero Section */
+header {
+  background: linear-gradient(90deg, #0071c5 0%, #003057 100%); /* Intel blue gradient */
+  color: white;
+  text-align: center;
+  padding: 48px 0 40px 0; /* Extra top padding for creativity */
+  margin-bottom: 32px; /* More space below header */
+  border-radius: 0 0 32px 32px; /* Rounded bottom corners */
+  box-shadow: 0 6px 24px rgba(0, 113, 197, 0.12); /* Soft shadow under header */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a subtle glowing effect behind the logo */
+header img {
+  width: 120px;
+  display: block;
+  margin: 0 auto 20px auto;
+  filter: drop-shadow(0 0 16px #b3d7f2); /* Soft blue glow */
+}
+
+header > div { 
+  max-width: 600px; 
+  margin: 0 auto; 
+  padding: 0 16px; /* Add horizontal padding for better look */
+}
+header h1 { 
+  font-size: 2.3em; /* Slightly larger headline */
+  margin-bottom: 18px;
+  color: white;
+  letter-spacing: 2px; /* Add spacing for style */
+  text-shadow: 0 2px 8px rgba(0, 49, 87, 0.18); /* Soft shadow for headline */
+}
+header p { 
+  font-size: 1.15em;
+  margin-bottom: 0;
+  color: #e6f2fa; /* Lighter blue for subheading */
+  text-shadow: 0 1px 4px rgba(0, 49, 87, 0.10); /* Soft shadow for subheading */
+}
+
+/* Timeline Cards Section: horizontal scroll on large screens, vertical stack on small screens */
+section {
+  display: flex; /* Use Flexbox to align timeline cards in a row */
+  flex-direction: row; /* Row layout by default */
+  flex-wrap: nowrap; /* Prevent wrapping on large screens */
+  justify-content: flex-start; /* Align cards to the left */
+  align-items: stretch; /* Make all cards the same height */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 16px; /* Space between cards */
+  padding: 16px 0; /* Space above and below */
+  scroll-snap-type: x mandatory; /* Enable horizontal scroll snap */
+  margin-left: 77px;  /* Add space to the left of the cards section */
+  margin-right: 77px; /* Add space to the right of the cards section */
+  padding-bottom: 30px;
+}
+
+/* Each timeline card (direct child div of section) */
+section > div {
+  min-width: 220px;
+  background: #fff; /* Cards are white */
+  color: #003057; /* Intel dark blue text */
+  border-radius: 12px; /* Slightly more rounded corners */
+  padding: 20px 16px; /* More space on left and right sides of each card */
+  box-shadow: 0 2px 8px rgba(0,113,197,0.10); /* Soft Intel blue shadow */
+  flex: 0 0 auto;
+  margin-bottom: 0;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  scroll-snap-align: start; /* Snap each card to the start of the scroll area */
+  margin-left: 5px;  /* Add space to the left of the cards section */
+}
+
+/* Card hover effect for Intel style */
+section > div:hover {
+  box-shadow: 0 8px 24px rgba(0,113,197,0.22); /* Larger, deeper shadow on hover */
+  border-color: #0071c5; /* Highlight border with Intel blue */
+  transform: scale(1.04); /* Slightly grow card on hover */
+  transition: 
+    box-shadow 0.3s,
+    border-color 0.3s,
+    transform 0.3s; /* Smooth transitions for all effects */
+}
+
+/* Card headings for consistent spacing and color */
+section > div h2,
+section > div h3 {
+  color: #003057; /* Intel dark blue for timeline headings */
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: bold; /* Make headings bold */
+  text-align: center; /* Center headings */
+}
+
+section > div h2 {
+  font-size: 1.3em;
+  letter-spacing: 1px;
+}
+
+section > div h3 {
+  font-size: 1.1em;
+}
+
+/* Card images: bigger and centered */
+section > div img {
+  width: 200px; /* Square image width */
+  height: 120px; /* Square image height */
+  object-fit: cover;
+  border-radius: 8px; /* Slightly rounded corners for squares */
+  margin-bottom: 12px;
+  display: block; /* Make image a block element */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto;
+}
+
+/* Overlay box: hidden by default, shown on card hover */
+.overlay {
+  position: absolute; /* Position overlay inside card */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,113,197,0.92); /* Semi-transparent Intel blue */
+  color: #fff; /* White text for contrast */
+  border-radius: 8px; /* Match card corners */
+  padding: 20px 16px; /* Match card's padding */
+  box-sizing: border-box;
+  opacity: 0; /* Hide by default */
+  pointer-events: none; /* Allow hover to trigger on card */
+  transition: opacity 0.2s; /* Smooth fade-in */
+  z-index: 2; /* Place overlay above other content */
+  text-align: left;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Show overlay when card is hovered */
+section > div:hover .overlay {
+  opacity: 1; /* Show overlay */
+  pointer-events: auto;
+}
+
+/* Center the timeline instruction text */
+.center-text {
+  text-align: center;
+  margin-top: 12px;
+  color: #003057; /* Intel dark blue for timeline instructions */
+  font-size: 1.1em;
+}
+
+/* On small screens, stack timeline cards vertically */
+@media (max-width: 600px) {
+  header {
+    width: 95vw; /* Header takes 90% of viewport width */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 0 24px 24px; /* Slightly less rounded for small screens */
+  }
+  section {
+    width: 60vw; /* Cards section takes 90% of viewport width */
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column; /* Stack cards vertically */
+    flex-wrap: nowrap; /* No wrapping needed */
+    align-items: stretch; /* Make all cards the same width */
+    overflow-x: visible; /* No horizontal scroll needed */
+    gap: 0; /* Remove horizontal gap */
+  }
+  section > div {
+    min-width: 0;
+    width: 90%;    /* Card takes 90% of section width */
+    height: 190px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
