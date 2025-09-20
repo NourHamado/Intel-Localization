@@ -1,12 +1,12 @@
-/* Set a light blue background for the whole page */
+/* Set a higher contrast background for the whole page */
 body {
-  background: #e6f2fa85; /* Intel light blue */
+  background: #c7e0f4; /* Slightly darker blue for better contrast */
 }
 
 /* Intel Hero Section */
 header {
-  background: linear-gradient(90deg, #0071c5 0%, #003057 100%); /* Intel blue gradient */
-  color: white;
+  background: linear-gradient(90deg, #005fa3 0%, #002244 100%); /* Deeper blue gradient for more contrast */
+  color: #fff;
   text-align: center;
   padding: 48px 0 40px 0; /* Extra top padding for creativity */
   margin-bottom: 32px; /* More space below header */
@@ -30,16 +30,16 @@ header > div {
   padding: 0 16px; /* Add horizontal padding for better look */
 }
 header h1 { 
+  color: #fff;
   font-size: 2.3em; /* Slightly larger headline */
   margin-bottom: 18px;
-  color: white;
   letter-spacing: 2px; /* Add spacing for style */
   text-shadow: 0 2px 8px rgba(0, 49, 87, 0.18); /* Soft shadow for headline */
 }
 header p { 
+  color: #f5faff; /* Even lighter for better contrast */
   font-size: 1.15em;
   margin-bottom: 0;
-  color: #e6f2fa; /* Lighter blue for subheading */
   text-shadow: 0 1px 4px rgba(0, 49, 87, 0.10); /* Soft shadow for subheading */
 }
 
@@ -54,16 +54,27 @@ section {
   gap: 16px; /* Space between cards */
   padding: 16px 0; /* Space above and below */
   scroll-snap-type: x mandatory; /* Enable horizontal scroll snap */
-  margin-left: 77px;  /* Add space to the left of the cards section */
-  margin-right: 77px; /* Add space to the right of the cards section */
+  margin-left: 123px;  /* Add space to the left of the cards section */
+  margin-right: 123px; /* Add space to the right of the cards section */
   padding-bottom: 30px;
 }
 
+/* Hover effect for timeline cards only */
+.timeline-card:hover {
+  box-shadow: 0 8px 24px rgba(0,113,197,0.22);
+  border-color: #0071c5;
+  transform: scale(1.04);
+  transition: 
+    box-shadow 0.3s,
+    border-color 0.3s,
+    transform 0.3s;
+}
+
 /* Each timeline card (direct child div of section) */
-section > div {
+.timeline-card {
   min-width: 220px;
   background: #fff; /* Cards are white */
-  color: #003057; /* Intel dark blue text */
+  color: #001122; /* Even darker blue for text */
   border-radius: 12px; /* Slightly more rounded corners */
   padding: 20px 16px; /* More space on left and right sides of each card */
   box-shadow: 0 2px 8px rgba(0,113,197,0.10); /* Soft Intel blue shadow */
@@ -76,38 +87,27 @@ section > div {
   margin-left: 5px;  /* Add space to the left of the cards section */
 }
 
-/* Card hover effect for Intel style */
-section > div:hover {
-  box-shadow: 0 8px 24px rgba(0,113,197,0.22); /* Larger, deeper shadow on hover */
-  border-color: #0071c5; /* Highlight border with Intel blue */
-  transform: scale(1.04); /* Slightly grow card on hover */
-  transition: 
-    box-shadow 0.3s,
-    border-color 0.3s,
-    transform 0.3s; /* Smooth transitions for all effects */
-}
-
 /* Card headings for consistent spacing and color */
-section > div h2,
-section > div h3 {
-  color: #003057; /* Intel dark blue for timeline headings */
+.timeline-card h2,
+.timeline-card h3 {
+  color: #002244; /* Even darker blue for headings */
   margin-top: 0;
   margin-bottom: 8px;
   font-weight: bold; /* Make headings bold */
   text-align: center; /* Center headings */
 }
 
-section > div h2 {
+.timeline-card h2 {
   font-size: 1.3em;
   letter-spacing: 1px;
 }
 
-section > div h3 {
+.timeline-card h3 {
   font-size: 1.1em;
 }
 
 /* Card images: bigger and centered */
-section > div img {
+.timeline-img {
   width: 200px; /* Square image width */
   height: 120px; /* Square image height */
   object-fit: cover;
@@ -125,7 +125,7 @@ section > div img {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,113,197,0.92); /* Semi-transparent Intel blue */
+  background: rgba(0,49,87,0.97); /* More opaque, deeper blue for higher contrast */
   color: #fff; /* White text for contrast */
   border-radius: 8px; /* Match card corners */
   padding: 20px 16px; /* Match card's padding */
@@ -135,7 +135,7 @@ section > div img {
   transition: opacity 0.2s; /* Smooth fade-in */
   z-index: 2; /* Place overlay above other content */
   text-align: left;
-  font-size: 1em;
+  font-size: 0.9em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,8 +151,36 @@ section > div:hover .overlay {
 .center-text {
   text-align: center;
   margin-top: 12px;
-  color: #003057; /* Intel dark blue for timeline instructions */
+  color: #002244; /* Even darker blue for better contrast */
   font-size: 1.1em;
+}
+
+/* Footer: higher contrast background and text */
+footer.bg-light {
+  background: #002244 !important; /* Even darker blue */
+  color: #fff !important;
+}
+footer a {
+  color: #e6f2fa !important; /* Lighter blue for links, higher contrast */
+}
+footer .text-muted,
+footer .small {
+  color: #fff !important;
+}
+
+/* White background and border for the 3-column section only */
+.three-col-container {
+  background: #fff;
+  border: 1.5px solid #d0d7e5;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,49,87,0.07);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* On small screens, stack timeline cards vertically */
@@ -173,11 +201,20 @@ section > div:hover .overlay {
     overflow-x: visible; /* No horizontal scroll needed */
     gap: 0; /* Remove horizontal gap */
   }
-  section > div {
+  .timeline-card{
     min-width: 0;
-    width: 90%;    /* Card takes 90% of section width */
-    height: 190px;
+    width: 100%;    /* Card takes 90% of section width */
+    height: 220px;
     margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .timeline-img{
+    width: 100%;    /* Card takes 90% of section width */
+    height: 110px;
+  }
+  .three-col-container{
+    max-width: 270px;
     margin-left: auto;
     margin-right: auto;
   }

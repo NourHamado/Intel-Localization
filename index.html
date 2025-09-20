@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+  <!-- Place your custom styles after Bootstrap -->
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body></body>
 
   <!-- Header / Hero Section -->
   <header>
@@ -29,11 +31,10 @@
 
   <!-- Timeline Cards Section -->
   <section>
-
     <!-- Card 1: 1968 -->
-    <div>
+    <div class="timeline-card">
       <h2>1968</h2>
-      <img src="img/1968.jpg" alt="Intel Founded 1968" width="60" />
+      <img src="img/1968.jpg" alt="Intel Founded 1968" width="60" class="timeline-img" />
       <h3>Intel Founded</h3>
       <!-- Add image -->
       <p class="overlay">
@@ -44,9 +45,9 @@
     </div>
 
     <!-- Card 2: 1971 -->
-    <div>
+    <div class="timeline-card">
       <h2>1971</h2>
-      <img src="img/1971.jpeg" alt="First Microprocessor 1971" width="60" />
+      <img src="img/1971.jpeg" alt="First Microprocessor 1971" width="60" class="timeline-img" />
       <h3>First Microprocessor</h3>
       <!-- Add image -->
       <p class="overlay">
@@ -57,9 +58,9 @@
     </div>
 
     <!-- Card 3: 1978 -->
-    <div>
+    <div class="timeline-card">
       <h2>1978</h2>
-      <img src="img/1978.jpg" alt="8086 Processor 1978" width="60" />
+      <img src="img/1978.jpg" alt="8086 Processor 1978" width="60" class="timeline-img" />
       <h3>8086 Processor</h3>
       <!-- Add image -->
       <p class="overlay">
@@ -69,9 +70,9 @@
     </div>
 
     <!-- Card 4: 1985 -->
-    <div>
+    <div class="timeline-card">
       <h2>1985</h2>
-      <img src="img/1985.jpg" alt="386 Processor 1985" width="60" />
+      <img src="img/1985.jpg" alt="386 Processor 1985" width="60" class="timeline-img" />
       <h3>386 Processor</h3>
       <!-- Add image -->
       <p class="overlay">
@@ -82,9 +83,9 @@
     </div>
 
     <!-- Card 5: 2006 -->
-    <div>
+    <div class="timeline-card">
       <h2>2006</h2>
-      <img src="img/2006.jpg" alt="Peak GHG Emissions 2006" width="60" />
+      <img src="img/2006.jpg" alt="Peak GHG Emissions 2006" width="60" class="timeline-img" />
       <h3>Peak GHG Emissions</h3>
       <!-- Add image -->
       <p class="overlay">
@@ -96,9 +97,9 @@
     </div>
 
     <!-- Card 6: 2020 -->
-    <div>
+    <div class="timeline-card">
       <h2>2020</h2>
-      <img src="img/2020.jpeg" alt="RISE Strategy 2020" width="60" />
+      <img src="img/2020.jpeg" alt="RISE Strategy 2020" width="60" class="timeline-img" />
       <h3>RISE Strategy</h3>
       <!-- Add image -->
       <p class="overlay">
@@ -109,9 +110,9 @@
     </div>
 
     <!-- Card 7: 2022 -->
-    <div>
+    <div class="timeline-card">
       <h2>2022</h2>
-      <img src="img/2022.webp" alt="Net-Zero By 2040 2022" width="60" />
+      <img src="img/2022.webp" alt="Net-Zero By 2040 2022" width="60" class="timeline-img" />
       <h3>Net-Zero By 2040</h3>
       <!-- Add image -->
       <p class="overlay">
@@ -122,9 +123,9 @@
     </div>
 
     <!-- Card 8: 2023 -->
-    <div>
+    <div class="timeline-card">
       <h2>2023</h2>
-      <img src="img/2023.png" alt="Renewable Electricity 2023" width="60" />
+      <img src="img/2023.png" alt="Renewable Electricity 2023" width="60" class="timeline-img" />
       <h3>Renewable Electricity</h3>
       <!-- Add image -->
       <p class="overlay">
@@ -135,9 +136,9 @@
     </div>
 
     <!-- Card 9: 2024 -->
-    <div>
+    <div class="timeline-card">
       <h2>2024</h2>
-      <img src="img/2024.webp" alt="Sustainability Summit 2024" width="60" />
+      <img src="img/2024.webp" alt="Sustainability Summit 2024" width="60" class="timeline-img" />
       <h3>Sustainability Summit</h3>
       <!-- Add image -->
       <p class="overlay">
@@ -147,6 +148,185 @@
       </p>
     </div>
   </section>
-  <p class="center-text">Scroll to view timeline | Hover over cards to learn more!</p>
+
+  <!-- Add space between timeline and columns -->
+  <div class="my-5"></div>
+
+  <!-- New Bootstrap 3-column section (responsive grid, icons, styled links) -->
+  <section class="three-col-container container px-5">
+    <div class="row">
+      <div class="col-12 col-md-4 mb-4 d-flex justify-content-center">
+        <div class="h-100 text-end w-100" style="max-width:400px;">
+          <div class="d-flex align-items-center justify-content-start mb-2">
+            <img src="img/rise-icon.png" alt="RISE Icon" width="24" height="24" class="me-2" />
+            <h2 class="h5 mb-0">RISE Strategy</h2>
+          </div>
+          <p>
+            Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
+            Intel sets ambitious 2030 goals, including driving industry-wide 
+            progress on climate action, water stewardship, and waste reduction.
+          </p>
+          <!-- Modal Trigger Button -->
+          <a href="#" class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#riseModal">Learn More</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-4 d-flex justify-content-center">
+        <div class="h-100 text-end w-100" style="max-width:400px;">
+          <div class="d-flex align-items-center justify-content-start mb-2">
+            <img src="img/commitment-icon.png" alt="Commitment Icon" width="24" height="24" class="me-2" />
+            <h2 class="h5 mb-0">Commitment</h2>
+          </div>
+          <p>
+            In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+            (Scope 1 and 2) by 2040. This commitment builds on decades of 
+            environmental initiatives and partnerships across the semiconductor 
+            industry.
+          </p>
+          <a href="#" class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#commitmentModal">Learn More</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-4 d-flex justify-content-center">
+        <div class="h-100 text-end w-100" style="max-width:400px;">
+          <div class="d-flex align-items-center justify-content-start mb-2">
+            <img src="img/water-icon.png" alt="Water & Waste Icon" width="24" height="24" class="me-2" />
+            <h2 class="h5 mb-0">Water &amp; Waste</h2>
+          </div>
+          <p>
+            Intel conserves billions of gallons of water annually and 
+            collaborates with local communities to restore watersheds.
+            Intel also upcycles and recycles materials to reduce waste and 
+            advance a circular economy.
+          </p>
+          <a href="#" class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#waterModal">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add more space before the subscription form -->
+  <div class="my-5"></div>
+
+  <!-- Subscription Form Section (centered) -->
+  <h2 class="h4 mb-3 text-center">Subscribe to our Newsletter</h2>
+  <section class="container my-2 d-flex justify-content-center" style="max-width:500px;">
+    <form class="w-100 d-flex flex-column align-items-center" style="max-width:400px; margin:auto;">
+      <div class="mb-3 w-100">
+        <label for="subscriberEmail" class="form-label visually-hidden">Email address</label>
+        <input type="email" class="form-control" id="subscriberEmail" placeholder="Enter your email" required style="width:100%; min-width:350px;">
+      </div>
+      <button type="submit" class="btn btn-primary btn-md mx-auto">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4 mt-5">
+    <div class="container">
+      <div class="text-muted small">
+        &copy; 2025 Intel Corporation. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Modal Components (place before </body>) -->
+  <div class="modal fade" id="riseModal" tabindex="-1" aria-labelledby="riseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-end">
+        <div class="modal-header">
+          <h5 class="modal-title" id="riseModalLabel">RISE Strategy Details</h5>
+          <!-- Removed the 'X' close button -->
+        </div>
+        <div class="modal-body">
+          <ul class="list-unstyled mb-0">
+            <li><strong>Responsible:</strong> Driving responsible business practices across operations, supply chain, and technology use.</li>
+            <li><strong>Inclusive:</strong> Expanding diversity, equity, and inclusion within Intel and in the tech industry.</li>
+            <li><strong>Sustainable:</strong> Advancing environmental sustainability, including carbon neutrality, renewable energy, and water stewardship.</li>
+            <li><strong>Enabling:</strong> Using technology to create positive global impact, enabling people and businesses to thrive.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="commitmentModal" tabindex="-1" aria-labelledby="commitmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-end">
+        <div class="modal-header">
+          <h5 class="modal-title" id="commitmentModalLabel">Commitment Details</h5>
+          <!-- Removed the 'X' close button -->
+        </div>
+        <div class="modal-body">
+          In 2022, Intel pledged to reach net-zero greenhouse gas emissions (Scope 1 and 2) by 2040. By 2030, it aims for 100% renewable electricity, major energy savings, net-positive water use, and zero waste to landfill. Intel is also investing in greener technologies and partnering with suppliers to cut upstream emissions, reinforcing its role in building a more sustainable semiconductor industry.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="waterModal" tabindex="-1" aria-labelledby="waterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-end">
+        <div class="modal-header">
+          <h5 class="modal-title" id="waterModalLabel">Water &amp; Waste Details</h5>
+          <!-- Removed the 'X' close button -->
+        </div>
+        <div class="modal-body">
+          Intel is working toward net positive water use by 2030, conserving billions of gallons annually and restoring watersheds through projects in the U.S., India, and Mexico. Some sites, like Ocotillo in Arizona, already return more water than they consume. On waste, Intel recycles or upcycles most of its manufacturing materials, sends very little to landfill, and aims for zero waste by 2030, advancing a circular economy through solvent recovery, precious metals reuse, and packaging redesign.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (required for modal) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function applyRtlIfNeeded() {
+      const htmlElement = document.documentElement;
+      const textSample = document.body.innerText.slice(0, 200); // sample some text
+      const rtlPattern = /[\u0600-\u06FF\u0750-\u077F\u0590-\u05FF]/; // Arabic/Hebrew ranges
+
+      if (rtlPattern.test(textSample)) {
+        htmlElement.setAttribute("dir", "rtl");
+        document.body.setAttribute("dir", "rtl");
+        // Move 'Learn More' buttons to the left for RTL
+        document.querySelectorAll('.btn-outline-primary').forEach(btn => {
+          btn.classList.remove('mt-2', 'mx-auto', 'float-end', 'float-start');
+          btn.classList.add('float-start');
+        });
+      } else {
+        htmlElement.setAttribute("dir", "ltr");
+        document.body.setAttribute("dir", "ltr");
+        // Move 'Learn More' buttons to the right for LTR
+        document.querySelectorAll('.btn-outline-primary').forEach(btn => {
+          btn.classList.remove('mt-2', 'mx-auto', 'float-end', 'float-start');
+          btn.classList.add('float-end');
+        });
+      }
+    }
+
+    function observeGoogleTranslate() {
+      const observer = new MutationObserver(() => {
+        applyRtlIfNeeded();
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        characterData: true
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      applyRtlIfNeeded();
+      observeGoogleTranslate();
+    });
+  </script>
 </body>
 </html>
